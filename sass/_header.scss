@@ -1,0 +1,55 @@
+header {
+	background-color: $colorFondo1;
+
+	.contenedor {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 30px 30px;
+
+		.nav {
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+
+			li {
+				a {
+					color: $colorPrincipal;
+					font-size: $tamanioNav;
+					font-family: $fuentePrincipal;
+					letter-spacing: 2px;
+					transition: color;
+				}
+
+				a:hover {
+					color: $colorSecundario;
+				}
+			}
+		}
+	}
+}
+
+/* ------- */
+
+/* @media screen and (max-width: 769px) {
+	header {
+		.contenedor {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			//padding: 30px 30px;
+		.nav {
+			align-items: center;
+			//padding-top: 10px;
+
+			li {
+				padding: 10px 0px;
+
+				a {
+					padding: 0 20px;
+					transition: none;
+				}
+			}
+		}
+	}
+}
