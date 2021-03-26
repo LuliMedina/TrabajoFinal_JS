@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Tu Piel</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+			crossorigin="anonymous"
+		/>
+	</head>
+
+	<body>
+
+		<header>
+			<div>
+				<h1>
+					<a href="index.html"
+						><img
+						src="css/imagenes/LogoSkinCare.png"
+						alt="Logo Skin Care"
+					/></a>
+				</h1>
+				<div>
+					<nav>
+						<ul>
+							<li><a href="#seccionTest">HACER EL TEST</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<section id="seccionAbout">
+			<div>
+				<div>
+					<img
+						src="css/imagenes/FotoTipodePiel.png"
+						alt="Foto Tipo de Piel"
+					/>
+				</div>
+			
+				<div>
+					<h2>¿Conoces tu piel?</h2>
+					<p>
+						¡La piel es nuestro bien más preciado y tenemos que cuidarla! Mantenerla nutrida, elástica e hidratada es la mejor manera. Su cuidado es imprescindible y el primer paso es conocer cuál es nuestro tipo de piel.
+					</p>
+					<p>
+						<a href="#seccionTest" class="boton"
+							>HACER EL TEST</a
+						>
+					</p>
+				</div>
+			</div>
+		</section>
+
+<!--Encuesta-->
+		<section id="seccionTest">
+			<div>
+				<h3>¿Cuál es tu tipo de piel?</h3>
+				<p>
+					| Respondé estas preguntas y conocé más sobre tu piel y cuáles son los mejores productos para cuidarla |
+				</p>
+
+				<form action="#" method="POST">
+					<label for = "nombre">Ingresa tu nombre</label>
+					<input
+						type="text"
+						id="nombre"
+						name="nombre"
+						placeholder="tu nombre"
+						required
+					>
+
+					<fieldset>
+						<legend>1· Tu piel al tacto, es...</legend>
+						<input
+							type="radio"
+							id="tacto1"
+							name="tacto"
+							value="tacto1">
+						<label for="tacto1">Gruesa y untuosa.</label>
+						<input
+							type="radio"
+							id="tacto2"
+							name="tacto"
+							value="tacto2">
+							<label for="tacto2">Brillante en la zona central, más seca en las mejillas.</label>
+					
+						<input
+							type="radio"
+							id="tacto3"
+							name="tacto"
+							value="tacto3">
+							<label for="tacto3">Fina y suave.</label>
+					</fieldset>
+
+					<fieldset>
+						<legend>2· ¿Tienes la piel brillante?</legend>
+						<input
+							type="radio"
+							id="brillo1"
+							name="brillo"
+							value="brillo1">
+							<label for="brillo1">Siempre.</label>
+						<input
+							type="radio"
+							id="brillo2"
+							name="brillo"
+							value="brillo2">
+							<label for="brillo2">A veces, sobre todo en la frente, la nariz y la barbilla.</label>
+						<input
+							type="radio"
+							id="brillo3"
+							name="brillo"
+							value="brillo3">
+							<label for="brillo3">Nunca.</label>
+					</fieldset>
+
+					<fieldset>
+						<legend>3· ¿Sueles tener granitos e imperfecciones?</legend>
+						<input
+							type="radio"
+							id="granitos1"
+							name="granitos"
+							value="granitos1">
+							<label for="granitos1">Siempre.</label>							
+						<input
+							type="radio"
+							id="granitos2"
+							name="granitos"
+							value="granitos2">								
+							<label for="granitos2">En ocasiones.</label>
+						<input
+							type="radio"
+							id="granitos3"
+							name="granitos"
+							value="granitos3">
+							<label for="granitos3">Casi nunca.</label>
+					</fieldset>
+
+					<fieldset>
+						<legend>4· ¿Notas tirantez o sequedad?</legend>
+						<input
+							type="radio"
+							id="sequedad1"
+							name="sequedad"
+							value="sequedad1">
+							<label for="sequedad1">Nunca.</label>							
+						<input
+							type="radio"
+							id="sequedad2"
+							name="sequedad"
+							value="sequedad2">								
+							<label for="sequedad2">A veces, más en invierno.</label>
+						<input
+							type="radio"
+							id="sequedad3"
+							name="sequedad"
+							value="sequedad3">
+							<label for="sequedad3">Siempre.</label>
+					</fieldset>
+
+					<fieldset>
+						<legend>5· ¿Tienes poros abiertos?</legend>
+						<input
+							type="radio"
+							id="poros1"
+							name="poros"
+							value="poros1">
+							<label for="poros1">Sí, suelo tenerlos.</label>							
+						<input
+							type="radio"
+							id="poros2"
+							name="poros"
+							value="poros2">								
+							<label for="poros2">A veces, en la nariz y la barbilla.</label>
+						<input
+							type="radio"
+							id="poros3"
+							name="poros"
+							value="poros3">
+							<label for="poros3">Nunca.</label>
+					</fieldset>
+
+					<input type="submit" value="VER RESULTADO" />
+
+				</form>
+			</div>
+		</section>
+
+<!--Footer-->
+		<footer>
+			<div>
+				<section id="logoFooter">
+					<a href="index.html"
+						><img
+						src="css/imagenes/LogoSkinCare.png"
+						alt="Logo Skin Care"
+					/></a>
+				</section>
+				<section id="socialmedia">
+					<ul>
+						<li>
+							<a
+								href="#"
+								target="_blank"
+								><i class="fab fa-facebook-f"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="#"
+								target="_blank"
+								><i class="fab fa-instagram"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="#"
+								target="_blank"
+								><i class="fab fa-youtube"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="#"
+								target="_blank"
+								><i class="far fa-paper-plane"></i
+							></a>
+						</li>
+					</ul>
+				</section>
+				<section id="imagefooter">
+					<img
+						src="css/imagenes/FooterIlustration.png"
+						alt="Ilustration Skin Care"
+					/>
+				</section>
+				<div></div>
+				<div>
+					<p id="credits">© 2021 by Luli Medina</p>
+				</div>
+			</div>
+		</footer>
+
+	</body>
+	</html>
