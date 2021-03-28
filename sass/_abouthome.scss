@@ -1,0 +1,44 @@
+#seccionAbout {
+	background-color: $colorFondo1;
+	.contenedor {
+		display: -ms-grid;
+		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		justify-items: center;
+		grid-gap: 10px;
+		padding-bottom: 50px;
+
+		img {
+			transition: all 1s;
+		}
+
+		img:hover {
+			filter: opacity(0.8);
+		}
+
+		h2 {
+			@extend %h2;
+			color: $colorSecundario;
+			text-align: left;
+		}
+
+		p {
+			@extend %p;
+			text-align: left;
+		}
+
+		.boton {
+			@extend %boton;
+			padding: 10px 25px;
+			transition: background;
+			transition: color;
+		}
+
+		.boton:hover {
+			background: $colorPrincipal;
+			color: $colorFondo1;
+		}
+	}
+}

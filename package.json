@@ -13,5 +13,14 @@
   "devDependencies": {
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.7"
-  }
+  },
+  "repository": {
+		"type": "git",
+		"url": "git+https://github.com/LuliMedina/TrabajoFinal_JS.git"
+	},
+	"bugs": {
+		"url": "https://github.com/LuliMedina/TrabajoFinal_JS/issues"
+	},
+	"homepage": "https://github.com/LuliMedina/TrabajoFinal_JS#readme",
+	"description": ""
 }

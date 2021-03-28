@@ -1,0 +1,73 @@
+#seccionTest {
+	background-color: $colorFondo2;
+
+	.contenedor {
+		padding: 70px 0px;
+
+		h2 {
+			@extend %h2;
+			color: $colorFondo1;
+			text-align: center;
+			margin-bottom: 0px;
+			font-size: 60px;
+		}
+
+		p {
+			@extend %p;
+			text-align: center;
+		}
+
+		form {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			padding: 0px 20px;
+			justify-content: center;
+			align-items: center;
+
+			label {
+				@extend %labelTest;
+			}
+
+			#nombre {
+				padding: 10px;
+				border: 1px solid $colorPrincipal;
+				border-radius: 30px;
+				background: none;
+				font-size: 12px;
+				color: $colorPrincipal;
+				resize: none;
+				outline: none;
+			}
+
+			fieldset {
+				border: none;
+				text-align: center;
+				margin: 20px 0px;
+
+				legend {
+					@extend %labelTest;
+					font-size: 16px;
+				}
+			}
+
+			#submit {
+				font-family: $fuentePrincipal;
+				font-size: 14px;
+				color: $colorFondo1;
+				border: 1px solid $colorSecundario;
+				background-color: $colorSecundario;
+				border-radius: 30px;
+				padding: 20px 50px;
+				margin: 20px 0px;
+				transition: background;
+				transition: color;
+			}
+			#submit:hover {
+				background: $colorFondo2;
+				color: $colorPrincipal;
+				border-color: $colorPrincipal;
+			}
+		}
+	}
+}

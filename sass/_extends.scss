@@ -1,0 +1,31 @@
+%h2 {
+	margin-bottom: 20px;
+	font-family: $fuenteSecundaria;
+	font-size: $tamanioTitulos;
+	letter-spacing: 2px;
+}
+
+%p {
+	margin-bottom: 40px;
+	color: $colorPrincipal;
+	font-family: $fuentePrincipal;
+	line-height: $altoLineaParrafos;
+	text-align: left;
+	font-size: 13px;
+}
+
+%boton {
+	font-family: $fuentePrincipal;
+	color: $colorPrincipal;
+	border: 1px solid $colorPrincipal;
+	border-radius: 20px;
+	padding: 10px 15px;
+}
+
+%labelTest {
+	color: $colorPrincipal;
+	font-family: $fuentePrincipal;
+	line-height: $altoLineaParrafos;
+	text-align: center;
+	font-size: 13px;
+}

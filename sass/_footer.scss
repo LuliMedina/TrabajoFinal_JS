@@ -1,0 +1,55 @@
+footer {
+	background-color: $colorFondo1;
+	.contenedor {
+		display: -ms-grid;
+		display: flex;
+		display: grid;
+		align-items: center;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 20px;
+		padding: 50px 20px;
+
+		img {
+			transition: all 1s;
+		}
+
+		img:hover {
+			filter: opacity(0.4);
+		}
+
+		#socialmedia {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			ul {
+				display: flex;
+				flex-wrap: nowrap;
+
+				i {
+					padding: 0 10px;
+					color: $colorSecundario;
+					font-size: 25px;
+					transition: color;
+				}
+
+				i:hover {
+					color: $colorFondo2;
+				}
+			}
+		}
+
+		#imagefooter {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		#credits {
+			color: rgb(151, 151, 151);
+			font-family: $fuentePrincipal;
+			line-height: $altoLineaParrafos;
+			text-align: center;
+			font-size: 11px;
+			padding: 10px 0;
+		}
+	}
+}
