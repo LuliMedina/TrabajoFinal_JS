@@ -25,10 +25,6 @@
 			justify-content: center;
 			align-items: center;
 
-			label {
-				@extend %labelTest;
-			}
-
 			#nombre {
 				padding: 10px;
 				border: 1px solid $colorPrincipal;
@@ -40,34 +36,37 @@
 				outline: none;
 			}
 
-			fieldset {
+			.pregunta {
 				border: none;
 				text-align: center;
-				margin: 20px 0px;
-
-				legend {
-					@extend %labelTest;
-					font-size: 16px;
-				}
+				margin: 20px 0px 5px 0px;
+				@extend %textTest;
 			}
 
-			#submit {
-				font-family: $fuentePrincipal;
-				font-size: 14px;
-				color: $colorFondo1;
-				border: 1px solid $colorSecundario;
-				background-color: $colorSecundario;
-				border-radius: 30px;
-				padding: 20px 50px;
-				margin: 20px 0px;
-				transition: background;
-				transition: color;
+			.respuesta {
+				border: none;
+				text-align: center;
+				font-size: 15px;
+				@extend %textTest;
 			}
-			#submit:hover {
-				background: $colorFondo2;
-				color: $colorPrincipal;
-				border-color: $colorPrincipal;
-			}
+		}
+
+		#submit {
+			font-family: $fuentePrincipal;
+			font-size: 14px;
+			color: $colorFondo1;
+			border: 1px solid $colorSecundario;
+			background-color: $colorSecundario;
+			border-radius: 30px;
+			padding: 20px 50px;
+			margin: 40px 0px;
+			transition: background;
+			transition: color;
+		}
+		#submit:hover {
+			background: $colorFondo2;
+			color: $colorPrincipal;
+			border-color: $colorPrincipal;
 		}
 	}
 }

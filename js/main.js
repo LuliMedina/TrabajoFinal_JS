@@ -1,12 +1,76 @@
-class Nombre {
-	constructor(nombre) {
-		this.nombre = nombre;
-	}
-	saludar() {
-		console.log(`¡Hola, ${this.nombre}!`);
-	}
+function armarTest() {
+	const contenidoTest = [];
+
+	preguntasTest.forEach((Preguntas, respuestaNumero) => {
+		const respuestas = [];
+
+		for (letter in Preguntas.respuestas) {
+			respuestas.push(
+				`<label>
+              <input type="radio" name="pregunta${respuestaNumero}" value="${letter}">
+              ${Preguntas.respuestas[letter]}
+            </label>`
+			);
+		}
+
+		contenidoTest.push(
+			`<div class="pregunta"> ${Preguntas.pregunta} </div>
+          <div class="respuesta"> ${respuestas.join("")} </div>`
+		);
+	});
+
+	testContenedor.innerHTML = contenidoTest.join("");
 }
 
+const nombreParticipante = document.querySelector("#nombre").value;
+const testContenedor = document.querySelector("#test");
+const submitButton = document.querySelector("#submit");
+const preguntasTest = [
+	{
+		pregunta: "1· Tu piel al tacto, es...",
+		respuestas: {
+			a: "Gruesa y untuosa.",
+			b: "Brillante en la zona central, más seca en las mejillas.",
+			c: "Fina y suave.",
+		},
+	},
+	{
+		pregunta: "2· ¿Tenes la piel brillante?",
+		respuestas: {
+			a: "Siempre.",
+			b: "A veces, sobre todo en la frente, la nariz y la barbilla.",
+			c: "Nunca.",
+		},
+	},
+	{
+		pregunta: "3· ¿Soles tener granitos e imperfecciones?",
+		respuestas: {
+			a: "Siempre.",
+			b: "En ocasiones.",
+			c: "Casi nunca.",
+		},
+	},
+	{
+		pregunta: "4· ¿Notas tirantez o sequedad?",
+		respuestas: {
+			a: "Nunca.",
+			b: "A veces, más en invierno.",
+			c: "Siempre.",
+		},
+	},
+	{
+		pregunta: "5· ¿Tenes poros abiertos?",
+		respuestas: {
+			a: "Sí, suelo tenerlos.",
+			b: "A veces, en la nariz y la barbilla.",
+			c: "Nunca.",
+		},
+	},
+];
+
+armarTest();
+
+/*
 class Respuestas {
 	constructor(
 		preguntaTacto,
@@ -45,8 +109,6 @@ class Respuestas {
 	}
 }
 
-const nombre1 = new Nombre(prompt("Ingresa tu nombre"));
-nombre1.saludar();
 
 const respuesta1 = new Respuestas(
 	"Tacto1",
@@ -85,3 +147,4 @@ const respuesta4 = new Respuestas(
 ArrayDeRespuestas.push(respuesta4);
 
 console.log(ArrayDeRespuestas);
+*/

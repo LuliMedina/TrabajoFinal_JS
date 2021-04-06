@@ -19,12 +19,12 @@
   border-radius: 20px;
   padding: 10px 15px; }
 
-#seccionTest .contenedor form label, #seccionTest .contenedor form fieldset legend {
+#seccionTest .contenedor form .pregunta, #seccionTest .contenedor form .respuesta {
   color: #252525;
   font-family: "Lexend", sans-serif;
   line-height: 150%;
   text-align: center;
-  font-size: 13px; }
+  font-size: 16px; }
 
 * {
   margin: 0;
@@ -118,27 +118,29 @@ header {
         color: #252525;
         resize: none;
         outline: none; }
-      #seccionTest .contenedor form fieldset {
+      #seccionTest .contenedor form .pregunta {
         border: none;
         text-align: center;
-        margin: 20px 0px; }
-        #seccionTest .contenedor form fieldset legend {
-          font-size: 16px; }
-      #seccionTest .contenedor form #submit {
-        font-family: "Lexend", sans-serif;
-        font-size: 14px;
-        color: #f8eadd;
-        border: 1px solid #dfae73;
-        background-color: #dfae73;
-        border-radius: 30px;
-        padding: 20px 50px;
-        margin: 20px 0px;
-        transition: background;
-        transition: color; }
-      #seccionTest .contenedor form #submit:hover {
-        background: #e2d0b7;
-        color: #252525;
-        border-color: #252525; }
+        margin: 20px 0px 5px 0px; }
+      #seccionTest .contenedor form .respuesta {
+        border: none;
+        text-align: center;
+        font-size: 15px; }
+    #seccionTest .contenedor #submit {
+      font-family: "Lexend", sans-serif;
+      font-size: 14px;
+      color: #f8eadd;
+      border: 1px solid #dfae73;
+      background-color: #dfae73;
+      border-radius: 30px;
+      padding: 20px 50px;
+      margin: 40px 0px;
+      transition: background;
+      transition: color; }
+    #seccionTest .contenedor #submit:hover {
+      background: #e2d0b7;
+      color: #252525;
+      border-color: #252525; }
 
 #paginaResultados {
   background-color: #f8eadd; }
