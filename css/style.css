@@ -1,10 +1,10 @@
-#seccionAbout .contenedor h2, #seccionTest .contenedor h2, #paginaResultados .contenedor h2 {
+#seccionAbout .contenedor h2, #seccionTest .contenedor h2, #seccionResultados .contenedor h2 {
   margin-bottom: 20px;
   font-family: "Della Respira", serif;
   font-size: 50px;
   letter-spacing: 2px; }
 
-#seccionAbout .contenedor p, #seccionTest .contenedor p, #paginaResultados .contenedor p {
+#seccionAbout .contenedor p, #seccionTest .contenedor p, #seccionResultados .contenedor p {
   margin-bottom: 40px;
   color: #252525;
   font-family: "Lexend", sans-serif;
@@ -142,16 +142,16 @@ header {
       color: #252525;
       border-color: #252525; }
 
-#paginaResultados {
+#seccionResultados {
   background-color: #f8eadd; }
-  #paginaResultados .contenedor {
+  #seccionResultados .contenedor {
     padding: 30px 0px; }
-    #paginaResultados .contenedor h2 {
+    #seccionResultados .contenedor h2 {
       color: #dfae73;
       line-height: 50%; }
-    #paginaResultados .contenedor .resaltar {
+    #seccionResultados .contenedor .resaltar {
       font-size: 15px; }
-    #paginaResultados .contenedor p {
+    #seccionResultados .contenedor p {
       line-height: 100%; }
 
 footer {

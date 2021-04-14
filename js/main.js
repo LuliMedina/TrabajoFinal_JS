@@ -1,30 +1,7 @@
-function armarTest() {
-	const contenidoTest = [];
-
-	preguntasTest.forEach((Preguntas, respuestaNumero) => {
-		const respuestas = [];
-
-		for (letter in Preguntas.respuestas) {
-			respuestas.push(
-				`<label>
-              <input type="radio" name="pregunta${respuestaNumero}" value="${letter}">
-              ${Preguntas.respuestas[letter]}
-            </label>`
-			);
-		}
-
-		contenidoTest.push(
-			`<div class="pregunta"> ${Preguntas.pregunta} </div>
-          <div class="respuesta"> ${respuestas.join("")} </div>`
-		);
-	});
-
-	testContenedor.innerHTML = contenidoTest.join("");
-}
-
-const nombreParticipante = document.querySelector("#nombre").value;
-const testContenedor = document.querySelector("#test");
+//Selectores-----------------------------
+let nombreParticipante = document.querySelector("#nombre");
 const submitButton = document.querySelector("#submit");
+const testContenedor = document.querySelector("#test");
 const preguntasTest = [
 	{
 		pregunta: "1· Tu piel al tacto, es...",
@@ -68,83 +45,58 @@ const preguntasTest = [
 	},
 ];
 
+//El diseño y armado del Test-----------------------------
+function armarTest() {
+	const contenidoTest = [];
+
+	preguntasTest.forEach((Preguntas, respuestaNumero) => {
+		const respuestas = [];
+
+		for (letter in Preguntas.respuestas) {
+			respuestas.push(
+				`<label>
+              <input type="radio" name="pregunta${respuestaNumero}" value="${letter}">
+              ${Preguntas.respuestas[letter]}
+            </label>`
+			);
+		}
+
+		contenidoTest.push(
+			`<div class="pregunta"> ${Preguntas.pregunta} </div>
+          <div class="respuesta"> ${respuestas.join("")} </div>`
+		);
+	});
+
+	testContenedor.innerHTML = contenidoTest.join("");
+}
 armarTest();
 
-/*
-class Respuestas {
-	constructor(
-		preguntaTacto,
-		preguntaBrillo,
-		preguntaGranitos,
-		preguntaSequedad,
-		preguntaPoros
-	) {
-		this.tacto = preguntaTacto;
-		this.brillo = preguntaBrillo;
-		this.granitos = preguntaGranitos;
-		this.sequedad = preguntaSequedad;
-		this.poros = preguntaPoros;
-	}
+/*Función para obtener resultados de la encuesta-----------------------------
+Todavía no la apliqué al proyecto*/
 
-	respuesta() {
-		if (
-			this.tacto === "Tacto1" &&
-			this.brillo === "Brillo1" &&
-			this.granitos === "Granitos1" &&
-			this.sequedad === "Sequedad1" &&
-			this.poros === "Poros1"
-		) {
-			return "Tu Piel es Grasa";
-		} else if (
-			this.tacto === "Tacto2" &&
-			this.brillo === "Brillo2" &&
-			this.granitos === "Granitos2" &&
-			this.sequedad === "Sequedad2" &&
-			this.poros === "Poros2"
-		) {
-			return "Tu Piel es Seca";
-		} else {
-			return "Tu Piel es Mixta";
-		}
-	}
+//Función para mostrar resultados-----------------------------
+submitButton.addEventListener("click", mostrarResultados);
+
+function mostrarResultados(e) {
+	e.preventDefault();
+	const contenedorResultados = document.createElement("div");
+
+	contenedorResultados.classList.add("contenedor");
+
+	const p = document.createElement("p");
+	p.textContent = `¡Hola, ${nombreParticipante.value}!`;
+	contenedorResultados.appendChild(p);
+
+	const h2 = document.createElement("h2");
+	h2.textContent = "Tu Tipo de piel es GRASA";
+	contenedorResultados.appendChild(h2);
+
+	const ptexto = document.createElement("ptexto");
+	ptexto.textContent =
+		"El cuidado diario de la misma, es la base del éxito para lucirla sana, hidratada y luminosa, sin ese brillo de grasitud que suelen presentar este tipo de pieles. En la rutina cotidiana, como paso fundamental e indispensable, el primer puesto se lo lleva la limpieza facial con productos oíl-free, ya que, sin ésta nada de lo que apliquemos después dará resultados. Siempre debe realizarse como mínimo 2 veces al día (al levantarnos y antes de dormir).Las aguas micelares son una buena opción ya que además de tener propiedades desmaquillantes, arrastran la grasitud dejando la piel hidratada, éstas se pasan con una esponja o torunda de algodón y no se enjuagan.";
+	contenedorResultados.appendChild(ptexto);
+
+	document
+		.querySelector("#seccionResultados")
+		.appendChild(contenedorResultados);
 }
-
-
-const respuesta1 = new Respuestas(
-	"Tacto1",
-	"Brillo1",
-	"Granitos1",
-	"Sequedad1",
-	"Poros1"
-);
-const respuesta2 = new Respuestas(
-	"Tacto2",
-	"Brillo2",
-	"Granitos2",
-	"Sequedad2",
-	"Poros2"
-);
-const respuesta3 = new Respuestas(
-	"Tacto3",
-	"Brillo2",
-	"Granitos1",
-	"Sequedad3",
-	"Poros1"
-);
-
-console.log(respuesta3.respuesta());
-
-const ArrayDeRespuestas = [respuesta1, respuesta2, respuesta3];
-
-const respuesta4 = new Respuestas(
-	"Tacto1",
-	"Brillo1",
-	"Granitos1",
-	"Sequedad1",
-	"Poros1"
-);
-
-ArrayDeRespuestas.push(respuesta4);
-
-console.log(ArrayDeRespuestas);
-*/
