@@ -1,3 +1,7 @@
+$(function () {
+	console.log("DOMContentLoaded");
+});
+
 //Selectores-----------------------------
 let nombreParticipante = document.querySelector("#nombre");
 const submitButton = document.querySelector("#submit");
@@ -75,7 +79,8 @@ armarTest();
 Todavía no la apliqué al proyecto*/
 
 //Función para mostrar resultados-----------------------------
-submitButton.addEventListener("click", mostrarResultados);
+//submitButton.addEventListener("click", mostrarResultados);
+$("#submit").on("click", mostrarResultados);
 
 function mostrarResultados(e) {
 	e.preventDefault();
