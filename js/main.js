@@ -2,6 +2,17 @@ $(function () {
 	console.log("DOMContentLoaded");
 });
 
+//Animate-----------------------------
+$(".boton").click(function (e) {
+	e.preventDefault();
+	$("html, body").animate(
+		{
+			scrollTop: $("#seccionTest").offset().top,
+		},
+		2000
+	);
+});
+
 //Selectores-----------------------------
 let nombreParticipante = document.querySelector("#nombre");
 const submitButton = document.querySelector("#submit");
@@ -79,11 +90,18 @@ armarTest();
 Todavía no la apliqué al proyecto*/
 
 //Función para mostrar resultados-----------------------------
-//submitButton.addEventListener("click", mostrarResultados);
-$("#submit").on("click", mostrarResultados);
+//$("#submit").on("click", mostrarResultados);
 
-function mostrarResultados(e) {
+$("#submit").click(function (e) {
 	e.preventDefault();
+
+	$("html, body").animate(
+		{
+			scrollTop: $("#seccionResultados").offset().top,
+		},
+		2000
+	);
+
 	const contenedorResultados = document.createElement("div");
 
 	contenedorResultados.classList.add("contenedor");
@@ -104,4 +122,4 @@ function mostrarResultados(e) {
 	document
 		.querySelector("#seccionResultados")
 		.appendChild(contenedorResultados);
-}
+});
