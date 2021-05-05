@@ -1,0 +1,34 @@
+[
+{
+	"pregunta": "2· ¿Tenes la piel brillante?",
+	"respuestas": {
+		"a": "Siempre.",
+		"b": "A veces, sobre todo en la frente, la nariz y la barbilla.",
+		"c": "Nunca."
+	}
+},
+{
+	"pregunta": "3· ¿Soles tener granitos e imperfecciones?",
+	"respuestas": {
+		"a": "Siempre.",
+		"b": "En ocasiones.",
+		"c": "Casi nunca."
+	}
+},
+{
+	"pregunta": "4· ¿Notas tirantez o sequedad?",
+	"respuestas": {
+		"a": "Nunca.",
+		"b": "A veces, más en invierno.",
+		"c": "Siempre."
+	}
+},
+{
+	"pregunta": "5· ¿Tenes poros abiertos?",
+	"respuestas": {
+		"a": "Sí, suelo tenerlos.",
+		"b": "A veces, en la nariz y la barbilla.",
+		"c": "Nunca."
+	}
+}
+]
